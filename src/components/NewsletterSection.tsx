@@ -5,41 +5,38 @@ import { Mail } from 'lucide-react';
 
 /**
  * EDITABLE UI COMPONENT - NewsletterSection
- * 
- * Componente UI completamente editable para suscripción a newsletter.
- * El agente IA puede modificar colores, textos, layout, etc.
- * 
- * Consume lógica de HeadlessNewsletter (solo muestra email input).
+ * Editorial-chic newsletter subscription
  */
 
 export const NewsletterSection = () => {
   return (
     <HeadlessNewsletter>
       {(logic) => (
-        <section className="bg-muted/30 py-16 border-y">
+        <section className="bg-foreground text-background py-20">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {logic.success ? (
               <div className="space-y-4">
                 <div className="flex justify-center">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <Mail className="h-8 w-8 text-primary" />
+                  <div className="bg-background/10 p-3">
+                    <Mail className="h-8 w-8" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  Thanks for subscribing!
+                <h3 className="text-2xl font-bold">
+                  Welcome to MAISON
                 </h3>
-                <p className="text-muted-foreground">
-                  You'll receive our best offers and promotions soon.
+                <p className="text-background/70">
+                  You're now part of our exclusive community.
                 </p>
               </div>
             ) : (
               <div className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-foreground">
-                    Want promotional emails?
+                <div className="space-y-3">
+                  <p className="text-sm uppercase tracking-[0.3em] text-background/70">Newsletter</p>
+                  <h3 className="text-3xl font-bold">
+                    Stay Connected
                   </h3>
-                  <p className="text-lg text-muted-foreground">
-                    Subscribe to our newsletter and get exclusive offers
+                  <p className="text-lg text-background/70">
+                    Join our community for exclusive access to new collections and editorial content.
                   </p>
                 </div>
                 
@@ -56,20 +53,20 @@ export const NewsletterSection = () => {
                     value={logic.email}
                     onChange={(e) => logic.setEmail(e.target.value)}
                     disabled={logic.isSubmitting}
-                    className="flex-1"
+                    className="flex-1 bg-background/10 border-background/20 text-background placeholder:text-background/50 focus:bg-background/20"
                     required
                   />
                   <Button 
                     type="submit"
                     disabled={logic.isSubmitting}
-                    className="sm:w-auto"
+                    className="sm:w-auto bg-background text-foreground hover:bg-background/90"
                   >
                     {logic.isSubmitting ? 'Subscribing...' : 'Subscribe'}
                   </Button>
                 </form>
                 
                 {logic.error && (
-                  <p className="text-sm text-destructive">
+                  <p className="text-sm text-background/70">
                     {logic.error}
                   </p>
                 )}
