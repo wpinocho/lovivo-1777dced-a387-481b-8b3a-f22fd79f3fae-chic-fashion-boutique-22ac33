@@ -67,9 +67,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           <div className="max-w-xl">
             <p className="text-sm tracking-[0.3em] uppercase text-white mb-4">Spring/Summer 2025</p>
             <h1 style={{ fontSize: '84px', letterSpacing: '0px' }} className="text-6xl font-bold text-white mb-6 leading-tight">New Drops!</h1>
-            <p className="text-xl text-white/90 mb-8">
-              Discover our latest collection of editorial-inspired pieces designed for the modern woman.
-            </p>
+            <p style={{ fontSize: '31px', letterSpacing: '0px' }} className="text-xl text-white/90 mb-8">Discover our latest collection of editorial-inspired pieces designed for the modern woman!</p>
             <div className="flex gap-4">
               <Button size="lg" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
                 Shop Now
