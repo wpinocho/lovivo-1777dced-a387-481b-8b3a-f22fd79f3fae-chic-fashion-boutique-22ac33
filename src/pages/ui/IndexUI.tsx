@@ -66,9 +66,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="max-w-xl">
             <p className="text-sm tracking-[0.3em] uppercase text-white mb-4">Spring/Summer 2025</p>
-            <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
-              New Drops
-            </h1>
+            <h1 style={{ fontSize: '84px', letterSpacing: '0px' }} className="text-6xl font-bold text-white mb-6 leading-tight">New Drops!</h1>
             <p className="text-xl text-white/90 mb-8">
               Discover our latest collection of editorial-inspired pieces designed for the modern woman.
             </p>
